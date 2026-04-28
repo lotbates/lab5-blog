@@ -179,7 +179,6 @@ osc.<span class="fn">start</span>(t);  osc.<span class="fn">stop</span>(t + dura
 
 <span class="cm">// Schedule UI: approximate, via wall-clock delay</span>
 <span class="fn">setTimeout</span>(() =&gt; highlightNote(phraseIdx, noteIdx), wallDelay);</pre>
-I
   <p>Implementing this separation made me appreciate the Web Audio API design. The <code>AudioContext</code> clock is isolated from the JavaScript event loop so that audio scheduling can be deterministic even when the UI thread is busy.</p>
 
   <h2>Notes for Next Time</h2>
